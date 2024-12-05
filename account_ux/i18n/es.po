@@ -3,16 +3,14 @@
 # 	* account_ux
 # 
 # Translators:
-# feg, 2024
-# Gonzalo, 2024
 # Juan José Scarafía <scarafia.juanjose@gmail.com>, 2024
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0+e\n"
+"Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-26 12:33+0000\n"
-"PO-Revision-Date: 2023-11-23 13:23+0000\n"
+"POT-Creation-Date: 2024-12-05 20:16+0000\n"
+"PO-Revision-Date: 2024-11-08 12:53+0000\n"
 "Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/adhoc/teams/46451/es/)\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +22,6 @@ msgstr ""
 #. module: account_ux
 #. odoo-python
 #: code:addons/account_ux/models/account_move.py:0
-#, python-format
 msgid ""
 "\n"
 "Date\t\t\tInvoice Date\t\tInvoice\n"
@@ -53,23 +50,6 @@ msgid "Add an internal note..."
 msgstr "Agregar una nota interna"
 
 #. module: account_ux
-#: model:ir.model.fields,field_description:account_ux.field_account_account__algolia_search
-#: model:ir.model.fields,field_description:account_ux.field_account_bank_statement_line__algolia_search
-#: model:ir.model.fields,field_description:account_ux.field_account_change_currency__algolia_search
-#: model:ir.model.fields,field_description:account_ux.field_account_chart_template__algolia_search
-#: model:ir.model.fields,field_description:account_ux.field_account_group__algolia_search
-#: model:ir.model.fields,field_description:account_ux.field_account_invoice_report__algolia_search
-#: model:ir.model.fields,field_description:account_ux.field_account_journal__algolia_search
-#: model:ir.model.fields,field_description:account_ux.field_account_move__algolia_search
-#: model:ir.model.fields,field_description:account_ux.field_account_move_line__algolia_search
-#: model:ir.model.fields,field_description:account_ux.field_account_payment__algolia_search
-#: model:ir.model.fields,field_description:account_ux.field_res_company__algolia_search
-#: model:ir.model.fields,field_description:account_ux.field_res_config_settings__algolia_search
-#: model:ir.model.fields,field_description:account_ux.field_res_currency_rate__algolia_search
-msgid "Algolia Search"
-msgstr ""
-
-#. module: account_ux
 #: model_terms:ir.ui.view,arch_db:account_ux.view_account_invoice_tree
 msgid "Amount total"
 msgstr "Monto Total"
@@ -87,22 +67,12 @@ msgstr "¿Cuenta analítica requerida?"
 #. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_invoice_report__price_average
 msgid "Average Price (CC)"
-msgstr "Precio Promedio (CC)"
+msgstr "Precio promedio"
 
 #. module: account_ux
 #: model:ir.model.fields,help:account_ux.field_account_invoice_report__price_average
 msgid "Average Price in company currency"
 msgstr "Precio Promedio en moneda de la compañía"
-
-#. module: account_ux
-#: model:ir.model,name:account_ux.model_account_bank_statement_line
-msgid "Bank Statement Line"
-msgstr "Línea de extracto bancario"
-
-#. module: account_ux
-#: model:ir.ui.menu,name:account_ux.menu_finance_bank_and_cash
-msgid "Bank and Cash"
-msgstr "Banco y Caja"
 
 #. module: account_ux
 #: model_terms:ir.ui.view,arch_db:account_ux.view_account_change_currency
@@ -126,11 +96,6 @@ msgstr "Cambiar Solo Moneda"
 #: model:ir.model.fields,field_description:account_ux.field_account_change_currency__change_type
 msgid "Change Type"
 msgstr "Cambiar Tipo"
-
-#. module: account_ux
-#: model_terms:ir.actions.act_window,help:account_ux.action_account_payments_transfer
-msgid "Click to register a transfer between liquidity journals"
-msgstr "Haga clic para registrar una transferencia entre diarios de liquidez."
 
 #. module: account_ux
 #: model:ir.model,name:account_ux.model_res_company
@@ -184,7 +149,6 @@ msgstr "Tipo de cambio"
 #. module: account_ux
 #. odoo-python
 #: code:addons/account_ux/wizards/account_change_currency.py:0
-#, python-format
 msgid "Currency changed from %s to %s with rate %s"
 msgstr "Moneda cambiada de %s a %s con tasa %s"
 
@@ -248,7 +212,6 @@ msgstr "Fecha de Vencimiento"
 #. module: account_ux
 #. odoo-python
 #: code:addons/account_ux/models/account_move.py:0
-#, python-format
 msgid "ERROR: Invoice was not sent via email"
 msgstr "ERROR: La factura no fue enviada por correo electrónico"
 
@@ -297,7 +260,6 @@ msgstr ""
 #. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_bank_statement_line__internal_notes
 #: model:ir.model.fields,field_description:account_ux.field_account_move__internal_notes
-#: model:ir.model.fields,field_description:account_ux.field_account_payment__internal_notes
 msgid "Internal Notes"
 msgstr "Notas Internas"
 
@@ -315,7 +277,6 @@ msgstr "Estadísticas de facturas"
 
 #. module: account_ux
 #: model:ir.model,name:account_ux.model_account_journal
-#: model_terms:ir.ui.view,arch_db:account_ux.view_account_invoice_filter
 msgid "Journal"
 msgstr "Diario"
 
@@ -344,7 +305,7 @@ msgstr "Última actualización el"
 #. module: account_ux
 #: model_terms:ir.ui.view,arch_db:account_ux.view_account_payment_tree_personalization
 msgid "Memo"
-msgstr "Memo"
+msgstr ""
 
 #. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_change_currency__move_id
@@ -354,7 +315,6 @@ msgstr "Movimiento"
 #. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_bank_statement_line__other_currency
 #: model:ir.model.fields,field_description:account_ux.field_account_move__other_currency
-#: model:ir.model.fields,field_description:account_ux.field_account_payment__other_currency
 msgid "Other Currency"
 msgstr "Otra Moneda"
 
@@ -374,11 +334,6 @@ msgid "Partial reconciliations"
 msgstr "Conciliaciones Parciales"
 
 #. module: account_ux
-#: model_terms:ir.ui.view,arch_db:account_ux.view_account_invoice_filter
-msgid "Partner"
-msgstr "Empresa"
-
-#. module: account_ux
 #: model_terms:ir.ui.view,arch_db:account_ux.view_account_payment_tree
 msgid "Payment Method"
 msgstr "Método de Pago"
@@ -396,16 +351,10 @@ msgstr "Pagos"
 #. module: account_ux
 #. odoo-python
 #: code:addons/account_ux/models/account_move.py:0
-#, python-format
 msgid "Please check the email template associated with the invoice journal."
 msgstr ""
 "Compruebe la plantilla de correo electrónico asociada con el diario de "
 "facturas."
-
-#. module: account_ux
-#: model_terms:ir.ui.view,arch_db:account_ux.view_move_line_payment_tree
-msgid "Reconcile"
-msgstr "Conciliar"
 
 #. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_res_company__reconcile_on_company_currency
@@ -437,7 +386,7 @@ msgstr "Vendedor del contacto relacionado con este apunte contable"
 #. module: account_ux
 #: model:ir.model.fields,help:account_ux.field_account_change_currency__currency_to_id
 msgid "Select a currency to apply on the invoice"
-msgstr "Select a currency to apply on the invoice"
+msgstr ""
 
 #. module: account_ux
 #: model:ir.model.fields,help:account_ux.field_account_change_currency__currency_rate
@@ -453,9 +402,7 @@ msgstr ""
 
 #. module: account_ux
 #. odoo-python
-#: code:addons/account_ux/models/account_account.py:0
 #: code:addons/account_ux/models/account_journal.py:0
-#, python-format
 msgid ""
 "Solo puede utilizar una moneda secundaria distinta a la moneda de la "
 "compañía (%s)."
@@ -464,7 +411,6 @@ msgstr ""
 #. module: account_ux
 #. odoo-python
 #: code:addons/account_ux/models/account_move.py:0
-#, python-format
 msgid ""
 "Some move lines don't have analytic account and analytic account is required by theese accounts.\n"
 "* Accounts: %s\n"
@@ -480,9 +426,17 @@ msgid "Source Document"
 msgstr "Documento de Origen"
 
 #. module: account_ux
+#: model_terms:ir.ui.view,arch_db:account_ux.res_config_settings_view_form
+msgid ""
+"The accounting plan will be reloaded, creating accounts, taxes, and other "
+"records that may be missing. It is recommended to perform this action in a "
+"testing environment before implementing it in production to avoid potential "
+"inconsistencies"
+msgstr ""
+
+#. module: account_ux
 #. odoo-python
 #: code:addons/account_ux/models/account_move.py:0
-#, python-format
 msgid "The date and invoice date of a sale invoice must be the same: %s"
 msgstr "La fecha contable y fecha de la factura deben ser la misma: %s"
 
@@ -516,6 +470,13 @@ msgstr ""
 
 #. module: account_ux
 #: model_terms:ir.ui.view,arch_db:account_ux.view_account_change_currency
+msgid ""
+"This value will be used to update the values of the amount without forcing "
+"the currency rate"
+msgstr ""
+
+#. module: account_ux
+#: model_terms:ir.ui.view,arch_db:account_ux.view_account_change_currency
 msgid "This wizard will change the currency of the invoice"
 msgstr "Este asistente modifcará la moneda de la factura"
 
@@ -525,23 +486,17 @@ msgstr "Este asistente modifcará la moneda de la factura"
 #: model_terms:ir.ui.view,arch_db:account_ux.view_account_invoice_line_report_tree
 #: model_terms:ir.ui.view,arch_db:account_ux.view_account_invoice_tree
 msgid "Total"
-msgstr "Total"
+msgstr "Total en moneda"
 
 #. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_invoice_report__total_cc
 msgid "Total (CC)"
-msgstr "Total (CC)"
+msgstr ""
 
 #. module: account_ux
 #: model_terms:ir.ui.view,arch_db:account_ux.view_move_line_payment_tree
 msgid "Total Balance"
 msgstr "Balance Total"
-
-#. module: account_ux
-#: model:ir.actions.act_window,name:account_ux.action_account_payments_transfer
-#: model:ir.ui.menu,name:account_ux.menu_action_account_payments_transfer
-msgid "Transfers"
-msgstr "Transferencias"
 
 #. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_invoice_report__price_unit
@@ -556,7 +511,7 @@ msgstr "Total sin impuestos"
 #. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_invoice_report__price_subtotal
 msgid "Untaxed Total (CC)"
-msgstr "Total sin impuestos (CC)"
+msgstr "Base imponible"
 
 #. module: account_ux
 #: model:ir.model.fields,help:account_ux.field_account_invoice_report__price_subtotal
@@ -605,7 +560,6 @@ msgstr ""
 #. module: account_ux
 #. odoo-python
 #: code:addons/account_ux/models/res_currency_rate.py:0
-#, python-format
 msgid ""
 "You can not create a rate without company since you already have rates "
 "before %s with company set. The rate you want to create will not have any "
