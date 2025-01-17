@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-15 10:25+0000\n"
+"POT-Creation-Date: 2025-01-16 16:02+0000\n"
 "PO-Revision-Date: 2024-11-08 12:53+0000\n"
 "Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/adhoc/teams/46451/es/)\n"
@@ -30,9 +30,14 @@ msgstr ""
 "Fecha\t\t\tFecha de Factura\t\tFactura\n"
 
 #. module: account_ux
-#: model:ir.model,name:account_ux.model_account_account
-msgid "Account"
-msgstr "Cuenta"
+#: model_terms:ir.ui.view,arch_db:account_ux.view_move_form
+msgid "<span> = </span>"
+msgstr ""
+
+#. module: account_ux
+#: model_terms:ir.ui.view,arch_db:account_ux.view_move_form
+msgid "<span>1 </span>"
+msgstr ""
 
 #. module: account_ux
 #: model:ir.model,name:account_ux.model_account_chart_template
@@ -60,11 +65,6 @@ msgid "Amount untaxed"
 msgstr "Monto sin impuestos"
 
 #. module: account_ux
-#: model:ir.model.fields,field_description:account_ux.field_account_account__analytic_distribution_required
-msgid "Analytic Distribution Required?"
-msgstr "¿Cuenta analítica requerida?"
-
-#. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_invoice_report__price_average
 msgid "Average Price (CC)"
 msgstr "Precio promedio"
@@ -76,26 +76,40 @@ msgstr "Precio Promedio en moneda de la compañía"
 
 #. module: account_ux
 #: model_terms:ir.ui.view,arch_db:account_ux.view_account_change_currency
+#: model_terms:ir.ui.view,arch_db:account_ux.view_account_move_change_rate
 msgid "Cancel"
 msgstr "Cancelar"
 
 #. module: account_ux
 #: model:ir.actions.act_window,name:account_ux.action_account_change_currency
 #: model:ir.model,name:account_ux.model_account_change_currency
-#: model_terms:ir.ui.view,arch_db:account_ux.view_account_change_currency
-#: model_terms:ir.ui.view,arch_db:account_ux.view_move_form
 msgid "Change Currency"
 msgstr "Cambiar Moneda"
 
 #. module: account_ux
-#: model:ir.model.fields.selection,name:account_ux.selection__account_change_currency__change_type__currency
-msgid "Change Only Currency"
-msgstr "Cambiar Solo Moneda"
+#: model:ir.actions.act_window,name:account_ux.action_account_move_change_rate
+msgid "Change Currency Rate"
+msgstr ""
 
 #. module: account_ux
-#: model:ir.model.fields,field_description:account_ux.field_account_change_currency__change_type
-msgid "Change Type"
-msgstr "Cambiar Tipo"
+#: model_terms:ir.ui.view,arch_db:account_ux.view_account_change_currency
+#: model_terms:ir.ui.view,arch_db:account_ux.view_move_form
+msgid "Change Currency and Rate"
+msgstr ""
+
+#. module: account_ux
+#: model_terms:ir.ui.view,arch_db:account_ux.view_account_move_change_rate
+msgid "Change Rate"
+msgstr ""
+
+#. module: account_ux
+#: model_terms:ir.ui.view,arch_db:account_ux.view_move_form
+msgid ""
+"Como el comprobante no tiene fecha, la cotización mostrada podría no ser la "
+"que se aplique, ya que se actualizará al validar o asignar una fecha. Para "
+"fijar la cotización y/o editar la tasa, debe asignar una fecha al "
+"comprobante"
+msgstr ""
 
 #. module: account_ux
 #: model:ir.model,name:account_ux.model_res_company
@@ -121,12 +135,19 @@ msgid "Contact Salesperson"
 msgstr "Contactar al Vendedor"
 
 #. module: account_ux
+#: model:ir.model.fields,field_description:account_ux.field_account_change_currency__conversion_date
+msgid "Conversion Rate"
+msgstr ""
+
+#. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_change_currency__create_uid
+#: model:ir.model.fields,field_description:account_ux.field_account_move_change_rate__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_change_currency__create_date
+#: model:ir.model.fields,field_description:account_ux.field_account_move_change_rate__create_date
 msgid "Created on"
 msgstr "Creado en"
 
@@ -142,7 +163,7 @@ msgstr "Moneda Origen"
 
 #. module: account_ux
 #: model:ir.model,name:account_ux.model_res_currency_rate
-#: model:ir.model.fields,field_description:account_ux.field_account_change_currency__currency_rate
+#: model:ir.model.fields,field_description:account_ux.field_account_move_change_rate__currency_rate
 msgid "Currency Rate"
 msgstr "Tipo de cambio"
 
@@ -156,6 +177,12 @@ msgstr "Moneda cambiada de %s a %s con tasa %s"
 #: model:ir.model.fields,help:account_ux.field_account_change_currency__currency_from_id
 msgid "Currency from Invoice"
 msgstr "Moneda de la Factura"
+
+#. module: account_ux
+#. odoo-python
+#: code:addons/account_ux/wizards/account_move_change_rate.py:0
+msgid "Currency rate changed from '%s' to '%s' . Currency rate forced"
+msgstr ""
 
 #. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_change_currency__currency_to_id
@@ -201,6 +228,7 @@ msgstr "Importe de Descuento"
 
 #. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_change_currency__display_name
+#: model:ir.model.fields,field_description:account_ux.field_account_move_change_rate__display_name
 msgid "Display Name"
 msgstr "Mostrar Nombre"
 
@@ -214,6 +242,11 @@ msgstr "Fecha de Vencimiento"
 #: code:addons/account_ux/models/account_move.py:0
 msgid "ERROR: Invoice was not sent via email"
 msgstr "ERROR: La factura no fue enviada por correo electrónico"
+
+#. module: account_ux
+#: model_terms:ir.ui.view,arch_db:account_ux.view_move_form
+msgid "Edit Rate"
+msgstr ""
 
 #. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_journal__mail_template_id
@@ -232,21 +265,9 @@ msgstr "Agrupar por..."
 
 #. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_change_currency__id
+#: model:ir.model.fields,field_description:account_ux.field_account_move_change_rate__id
 msgid "ID"
 msgstr "ID (identificación)"
-
-#. module: account_ux
-#: model:ir.model.fields,help:account_ux.field_account_account__analytic_distribution_required
-msgid ""
-"If True, then an analytic distribution will be required when posting journal"
-" entries with this account."
-msgstr ""
-"Elija si desea que se requieran cuentas analíticas al publicar entradas de "
-"diario con esta cuenta. Si selecciona: * Definido por tipo de cuenta: se "
-"requerirá o no con respecto al valor de '¿Cuenta analítica requerida?' en el"
-" tipo de cuenta * Obligatorio: será obligatorio, sin importar el valor en el"
-" tipo de cuenta * Opcional: no será obligatorio, sin importar el valor en el"
-" tipo de cuenta"
 
 #. module: account_ux
 #: model:ir.model.fields,help:account_ux.field_account_journal__mail_template_id
@@ -264,8 +285,13 @@ msgid "Internal Notes"
 msgstr "Notas Internas"
 
 #. module: account_ux
+#: model:ir.model.fields,field_description:account_ux.field_account_bank_statement_line__inverse_invoice_currency_rate
+#: model:ir.model.fields,field_description:account_ux.field_account_move__inverse_invoice_currency_rate
+msgid "Inverse Invoice Currency Rate"
+msgstr ""
+
+#. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_invoice_report__invoice_currency_id
-#: model_terms:ir.ui.view,arch_db:account_ux.view_account_change_currency
 #: model_terms:ir.ui.view,arch_db:account_ux.view_account_invoice_report_search
 msgid "Invoice Currency"
 msgstr "Moneda de la Factura"
@@ -294,11 +320,13 @@ msgstr "Apunte contable"
 
 #. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_change_currency__write_uid
+#: model:ir.model.fields,field_description:account_ux.field_account_move_change_rate__write_uid
 msgid "Last Updated by"
 msgstr "Última actualización realizada por"
 
 #. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_change_currency__write_date
+#: model:ir.model.fields,field_description:account_ux.field_account_move_change_rate__write_date
 msgid "Last Updated on"
 msgstr "Última actualización el"
 
@@ -309,14 +337,9 @@ msgstr ""
 
 #. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_change_currency__move_id
+#: model:ir.model.fields,field_description:account_ux.field_account_move_change_rate__move_id
 msgid "Move"
 msgstr "Movimiento"
-
-#. module: account_ux
-#: model:ir.model.fields,field_description:account_ux.field_account_bank_statement_line__other_currency
-#: model:ir.model.fields,field_description:account_ux.field_account_move__other_currency
-msgid "Other Currency"
-msgstr "Otra Moneda"
 
 #. module: account_ux
 #: model_terms:ir.ui.view,arch_db:account_ux.view_account_invoice_filter
@@ -379,7 +402,8 @@ msgid "Select a currency to apply on the invoice"
 msgstr ""
 
 #. module: account_ux
-#: model:ir.model.fields,help:account_ux.field_account_change_currency__currency_rate
+#: model:ir.model.fields,help:account_ux.field_account_change_currency__conversion_date
+#: model:ir.model.fields,help:account_ux.field_account_move_change_rate__currency_rate
 msgid "Select a rate to apply on the invoice"
 msgstr "Selecciona una cotización para aplicar en la factura"
 
@@ -397,18 +421,6 @@ msgid ""
 "Solo puede utilizar una moneda secundaria distinta a la moneda de la "
 "compañía (%s)."
 msgstr ""
-
-#. module: account_ux
-#. odoo-python
-#: code:addons/account_ux/models/account_move.py:0
-msgid ""
-"Some move lines don't have analytic account and analytic account is required by theese accounts.\n"
-"* Accounts: %s\n"
-"* Move lines ids: %s"
-msgstr ""
-"Algunas líneas de movimiento no tienen una cuenta analítica y estas cuentas requieren una cuenta analítica.\n"
-" * Cuentas:%s \n"
-"* Mover líneas ids:%s"
 
 #. module: account_ux
 #: model_terms:ir.ui.view,arch_db:account_ux.view_move_form
@@ -466,11 +478,6 @@ msgid ""
 msgstr ""
 
 #. module: account_ux
-#: model_terms:ir.ui.view,arch_db:account_ux.view_account_change_currency
-msgid "This wizard will change the currency of the invoice"
-msgstr "Este asistente modifcará la moneda de la factura"
-
-#. module: account_ux
 #: model:ir.model.fields,field_description:account_ux.field_account_invoice_report__price_total
 #: model:ir.ui.menu,name:account_ux.menu_full_reconciliations
 #: model_terms:ir.ui.view,arch_db:account_ux.view_account_invoice_line_report_tree
@@ -508,11 +515,6 @@ msgstr "Base imponible"
 #: model:ir.model.fields,help:account_ux.field_account_invoice_report__total_cc
 msgid "Untaxed Total in company currency"
 msgstr "Total sin impuestos en moneda de la compañía"
-
-#. module: account_ux
-#: model:ir.model.fields.selection,name:account_ux.selection__account_change_currency__change_type__value
-msgid "Update both currency and values"
-msgstr "Actualizar la moneda y la cotizacion"
 
 #. module: account_ux
 #: model:ir.actions.act_window,name:account_ux.action_account_moves_vendors_ledger
@@ -560,6 +562,12 @@ msgstr ""
 "tendrá ningún efecto, no se tendrá en cuenta."
 
 #. module: account_ux
+#: model:ir.model,name:account_ux.model_account_move_change_rate
+msgid "account.move.change.rate"
+msgstr ""
+
+#. module: account_ux
 #: model_terms:ir.ui.view,arch_db:account_ux.view_account_change_currency
+#: model_terms:ir.ui.view,arch_db:account_ux.view_account_move_change_rate
 msgid "or"
 msgstr "o"

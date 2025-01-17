@@ -4,14 +4,15 @@
 # 
 # Translators:
 # Juan José Scarafía <scarafia.juanjose@gmail.com>, 2024
+# Gonzalo, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-15 10:25+0000\n"
+"POT-Creation-Date: 2025-01-16 16:01+0000\n"
 "PO-Revision-Date: 2024-11-08 12:53+0000\n"
-"Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2024\n"
+"Last-Translator: Gonzalo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/adhoc/teams/46451/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,6 +61,9 @@ msgid ""
 "                        A second payment will be created in the destination journal.\n"
 "                    </span>"
 msgstr ""
+"<span invisible=\"paired_internal_transfer_payment_id or not is_internal_transfer or state != 'draft'\" class=\"fst-italic\">\n"
+"                        Un segundo pago se creará en el diario destino.\n"
+"                    </span>"
 
 #. module: account_internal_transfer
 #: model_terms:ir.ui.view,arch_db:account_internal_transfer.report_account_transfer_document
@@ -70,7 +74,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account_internal_transfer/models/account_payment.py:0
 msgid "A second payment has been created:"
-msgstr ""
+msgstr "Se ha creado un segundo pago:"
 
 #. module: account_internal_transfer
 #: model:ir.model,name:account_internal_transfer.model_account_bank_statement_line
@@ -80,23 +84,23 @@ msgstr "Línea de extracto bancario"
 #. module: account_internal_transfer
 #: model:ir.ui.menu,name:account_internal_transfer.menu_finance_bank_and_cash
 msgid "Bank and Cash"
-msgstr ""
+msgstr "Banco y Caja"
 
 #. module: account_internal_transfer
 #: model_terms:ir.actions.act_window,help:account_internal_transfer.action_account_payments_transfer
 msgid "Click to register a transfer between liquidity journals"
-msgstr ""
+msgstr "Haga clic para registrar una transferencia entre diarios de liquidez."
 
 #. module: account_internal_transfer
 #: model:ir.model.fields,field_description:account_internal_transfer.field_account_payment__destination_journal_id
 msgid "Destination Journal"
-msgstr ""
+msgstr "Diario Destino"
 
 #. module: account_internal_transfer
 #. odoo-python
 #: code:addons/account_internal_transfer/models/account_payment.py:0
 msgid "Destination journal"
-msgstr ""
+msgstr "Diario Destino"
 
 #. module: account_internal_transfer
 #: model_terms:ir.ui.view,arch_db:account_internal_transfer.report_account_transfer_document
@@ -109,12 +113,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:account_internal_transfer.field_account_payment__is_internal_transfer
 #: model_terms:ir.ui.view,arch_db:account_internal_transfer.report_account_transfer_document
 msgid "Internal Transfer"
-msgstr ""
+msgstr "Transferencia Interna"
 
 #. module: account_internal_transfer
 #: model_terms:ir.ui.view,arch_db:account_internal_transfer.view_account_payment_search
 msgid "Internal Transfers"
-msgstr ""
+msgstr "Transferencias Internas"
 
 #. module: account_internal_transfer
 #: model:ir.model,name:account_internal_transfer.model_account_payment
@@ -133,32 +137,33 @@ msgid ""
 "The origin or destination payment methods do not have an outstanding "
 "account."
 msgstr ""
+"Los métodos de pago de origen o destino no tienen una cuenta pendiente."
 
 #. module: account_internal_transfer
 #. odoo-python
 #: code:addons/account_internal_transfer/models/account_payment.py:0
 msgid "This payment has been created from:"
-msgstr ""
+msgstr "Este pago ha sido creado desde:"
 
 #. module: account_internal_transfer
 #. odoo-python
 #: code:addons/account_internal_transfer/models/account_payment.py:0
 msgid "Transfer from %s"
-msgstr ""
+msgstr "Transferir desde %s"
 
 #. module: account_internal_transfer
 #. odoo-python
 #: code:addons/account_internal_transfer/models/account_payment.py:0
 msgid "Transfer to %s"
-msgstr ""
+msgstr "Transferir a %s"
 
 #. module: account_internal_transfer
 #: model:ir.actions.act_window,name:account_internal_transfer.action_account_payments_transfer
 #: model:ir.ui.menu,name:account_internal_transfer.menu_action_account_payments_transfer
 msgid "Transfers"
-msgstr ""
+msgstr "Transferencias"
 
 #. module: account_internal_transfer
 #: model_terms:ir.ui.view,arch_db:account_internal_transfer.view_account_payment_form
 msgid "e.g. Cash"
-msgstr ""
+msgstr "ej. Caja"
